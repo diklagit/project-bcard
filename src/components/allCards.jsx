@@ -14,11 +14,6 @@ const AllCards = () => {
   if (searchTerm !== '') {
     cards = cards.filter(
       (card) =>
-        // Object.values(card).some(
-        //   (val) =>
-        //     (typeof val === 'string' && val.includes(searchTerm)) ||
-        //     (Number.isFinite(val) && val.toString().includes(searchTerm))
-        // )
         card.title?.includes(searchTerm) ||
         card.subtitle?.includes(searchTerm) ||
         card.description?.includes(searchTerm) ||
@@ -76,8 +71,6 @@ const AllCards = () => {
             cards.map((card) => (
               <Card
                 onLiked={async () => {
-                  //send request to unlike
-                  //ask for all cards again
                   try {
                     await favCards(card._id);
                     await refetchCards();

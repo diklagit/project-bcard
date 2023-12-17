@@ -21,7 +21,7 @@ import CardsFav from './components/cardsFav';
 import { SearchProvider } from './contexts/search.context';
 import UserInfo from './components/userInfo';
 import UserInfoEdit from './components/userInfoEdit';
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Sandbox from './components/sandbox';
 import { useTheme } from './contexts/mode.context';

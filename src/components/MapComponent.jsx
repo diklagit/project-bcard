@@ -41,7 +41,6 @@ function MapComponent({ location }) {
   const [map, setMap] = React.useState(null);
 
   const onLoad = React.useCallback(function callback(map) {
-    // This is just an example of getting and using the map instance!!! don't just blindly copy!
     const bounds = new window.google.maps.LatLngBounds(location);
     map.fitBounds(bounds);
 
@@ -60,7 +59,6 @@ function MapComponent({ location }) {
       onLoad={onLoad}
       onUnmount={onUnmount}
     >
-      {/* Child components, such as markers, info windows, etc. */}
       <></>
     </GoogleMap>
   ) : (

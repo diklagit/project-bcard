@@ -7,38 +7,6 @@ const NavBar = () => {
   const { user } = useAuth();
   const { searchTerm, setSearchTerm, clearTerm } = useSearch();
 
-  // useEffect =
-  //   (() => {
-  //     const get fullUserData= async ()=>{
-  //     const {data}= await getFullUser();)
-
-  //   }fullUserData()
-  //   },
-  //   []);
-
-  // useEffect(() => {
-  //   const getUserData = async () => {
-  //     try {
-  //       if (fullUser?._id) {
-  //         const { data } = await getFullUser(fullUser._id);
-  //         setUserData(data);
-  //       }
-  //     } catch (error) {
-  //       toast('🦄 error on receiving the user info', {
-  //         position: 'top-right',
-  //         autoClose: 5000,
-  //         hideProgressBar: false,
-  //         closeOnClick: true,
-  //         pauseOnHover: true,
-  //         draggable: true,
-  //         progress: undefined,
-  //         theme: 'light',
-  //       });
-  //     }
-  //     getUserData();
-  //   };
-  // },[fullUser]);
-
   return (
     <nav className='navbar navbar-expand-sm navbar-light shadow-sm fw-bold '>
       <div className='container px-2'>
@@ -97,14 +65,22 @@ const NavBar = () => {
             >
               <input
                 type='text'
-                placeholder={'Search...'}
-                autocomplete='off'
-                onkeydown='TopNavBar.googleSearchAttachKeyPressHandler(event)'
+                placeHolder={'Search...'}
+                autoComplete='off'
+                onKeyDown={() => {
+                  'TopNavBar.googleSearchAttachKeyPressHandler(event)';
+                }}
                 aria-label='Search field'
                 onChange={(e) => setSearchTerm(e.target.value)}
-                oninput='TopNavBar.searchWithSuggestions(this)'
-                onfocus='TopNavBar.searchWithSuggestions(this)'
-                onBlur='TopNavBar.searchFieldLostFocus(event)'
+                onInput={() => {
+                  'TopNavBar.searchWithSuggestions(this)';
+                }}
+                onFocus={() => {
+                  'TopNavBar.searchWithSuggestions(this)';
+                }}
+                onBlur={() => {
+                  'TopNavBar.searchFieldLostFocus(event)';
+                }}
                 value={searchTerm}
                 style={{ outline: 'none', paddingLeft: '20px' }}
                 className='border border-0 rounded-start-pill focus-ring-light'
@@ -144,9 +120,6 @@ const NavBar = () => {
               <li className='nav-item'>
                 <div className='nav-link dropdown-center '>
                   <i
-                    // src={fullUser.image?.url}
-                    // alt={fullUser.image?.alt}
-                    // className='fs-3 mx-1 my-auto'
                     className='bi bi-person-circle fs-3 text-black mx-1 my-auto personLink '
                     data-bs-toggle='dropdown'
                     aria-expanded='false'

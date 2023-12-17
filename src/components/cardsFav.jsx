@@ -9,26 +9,6 @@ import { favCards } from '../services/cardsService';
 import { toast } from 'react-toastify';
 
 const CardsFav = () => {
-  // const fn = () => {
-  //   throw {
-  //     message: 'Message',
-  //   };
-  // };
-  // try {
-  //   fn();
-  // } catch (error) {
-  //  toast('🦄'+ error.message, {
-  //         position: 'top-right',
-  //         autoClose: 5000,
-  //         hideProgressBar: false,
-  //         closeOnClick: true,
-  //         pauseOnHover: true,
-  //         draggable: true,
-  //         progress: undefined,
-  //         theme: 'light',
-  //       });;
-  // }
-
   let { cards, refetchCards } = useAllCards();
   const { user } = useAuth();
   const { searchTerm } = useSearch();
@@ -67,8 +47,6 @@ const CardsFav = () => {
               .map((card) => (
                 <Card
                   onLiked={async () => {
-                    //send request to unlike
-                    //ask for all cards again
                     try {
                       await favCards(card._id);
                       await refetchCards();

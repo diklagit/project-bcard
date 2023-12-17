@@ -12,6 +12,13 @@ import cardsService from '../services/cardsService';
 import { useCard } from '../hooks/useCard';
 import { useAuth } from '../contexts/auth.context';
 
+function normalizeError(error) {
+  if (error.includes('duplicate')) {
+    return 'Card with Email already exists';
+  }
+  return error;
+}
+
 const CardsEdit = () => {
   const [serverError, setServerError] = useState('');
   const { user } = useAuth();
@@ -113,7 +120,6 @@ const CardsEdit = () => {
     if (!card) {
       return;
     }
-    //(getting card's values) destructure from Card values
     const {
       title,
       subtitle,
@@ -124,7 +130,6 @@ const CardsEdit = () => {
       image: { url, alt },
       address: { state, country, city, street, houseNumber, zip },
     } = card;
-    //setting Card's values to the form's values
     form.setValues({
       title,
       subtitle,
@@ -175,7 +180,11 @@ const CardsEdit = () => {
         onSubmit={form.handleSubmit}
         className='row g-3 mt-3 justify-content-center gx-5'
       >
-        {serverError && <div className='alert alert-danger'>{serverError}</div>}
+        {serverError && (
+          <div className='alert alert-danger'>
+            {normalizeError(serverError)}
+          </div>
+        )}
         <div className='col-md-5'>
           <Input
             {...form.getFieldProps('title')}

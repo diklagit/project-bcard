@@ -108,7 +108,6 @@ const UserInfoEdit = () => {
     if (!fullUser) {
       return;
     }
-    //getting Users's values
     const {
       name: { first, middle, last },
       phone,
@@ -116,7 +115,6 @@ const UserInfoEdit = () => {
       address: { state, country, city, street, zip, houseNumber },
     } = fullUser;
 
-    //setting User's values to the form's values
     form.setValues({
       //name
       first,

@@ -2,12 +2,6 @@ import { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import { useAuth } from '../contexts/auth.context';
 
-/*const links = new Map([
-  ['/cards-fav', [{ link: '/about', label: 'About' },{ link: '/my-cards', label: 'My Cards' }]],
-  ['/sign-up', [{ link: '/about', label: 'About' }]],
-  ['/sign-in', [{ link: '/about', label: 'About' }]],
-]);
-*/
 const Footer = () => {
   const { pathname: path } = useLocation();
   const [linkDetails, setLinkDetails] = useState([]);

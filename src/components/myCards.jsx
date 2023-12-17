@@ -52,14 +52,11 @@ const MyCards = () => {
             cards.map((card) => (
               <Card
                 onLiked={async () => {
-                  //send request to unlike
-                  //ask for all cards again
                   try {
                     await favCards(card._id);
                     await refetchCards();
                   } catch (e) {
                     toast('🦄 please try again later', {});
-                    // toast('Error', { autoClose: 10000 });
                     console.log(e);
                   }
                 }}

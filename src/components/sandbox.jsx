@@ -18,8 +18,6 @@ const Sandbox = () => {
   if (searchTerm !== '') {
     usersInfo = usersInfo.filter(
       (userInfo) => userInfo.name.first?.includes(searchTerm)
-      //     userInfo.name.middle?.includes(searchTerm) ||
-      //     userInfo.name.last?.includes(searchTerm)
     );
   }
 
@@ -53,7 +51,6 @@ const Sandbox = () => {
           return 1;
         }
       });
-      //   const sortedUsers = await data.sort((a, b) => (a > b ? 0 : 1));
       console.log(data);
       setUsersInfo(data);
     };

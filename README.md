@@ -1,6 +1,6 @@
 # pro-bcard
 Hello, my name is Dikla and this is my 'Bcard App' project.
-Bcard is an app which shares business cards to the general publich and by that increses the exposure of the businesses for its benefit.
+Bcard is an app which shares business cards to the general public and by that increses the exposure of the businesses for its benefit.
 the actions that this app is offering are: 
 
 #### GENERAL:

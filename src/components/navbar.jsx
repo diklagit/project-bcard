@@ -8,7 +8,7 @@ const NavBar = () => {
   const { searchTerm, setSearchTerm, clearTerm } = useSearch();
 
   return (
-    <nav className='navbar navbar-expand-sm navbar-light shadow-sm fw-bold '>
+    <nav className='navbar navbar-expand-sm navbar-light shadow-sm fw-bold fixed-top'>
       <div className='container px-2'>
         <NavLink to='/' className='navbar-brand mx-2 fs-3 appName p-2'>
           Bcard<i className='bi bi-person-badge'></i>
@@ -125,18 +125,18 @@ const NavBar = () => {
                     aria-expanded='false'
                   ></i>
                   <ul className='dropdown-menu bg-black linkHover'>
-                    <li>
+                    <li className='nav-item'>
                       <NavLink
                         to='/user-info'
-                        className='nav-link text-info dropdown-item '
+                        className='nav-link text-light ms-3 userItem '
                       >
                         User info
                       </NavLink>
                     </li>
-                    <li>
+                    <li className='nav-item'>
                       <NavLink
                         to='/user-info-edit'
-                        className='nav-link text-info  dropdown-item'
+                        className='nav-link text-light ms-3 userItem'
                       >
                         Edit user info
                       </NavLink>
@@ -148,7 +148,7 @@ const NavBar = () => {
                     <li className='nav-item'>
                       <NavLink
                         to='/sign-out'
-                        className='nav-link text-info ms-3'
+                        className='nav-link text-light ms-3 userItem'
                       >
                         Sign out
                       </NavLink>

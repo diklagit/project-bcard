@@ -6,7 +6,7 @@ the actions that this app is offering are:
 #### GENERAL:
 - any guest can see business cards on the main page->all cards,
 - make a search on the cards pages
-- and sea the additional details of the card business on->card details page,
+- and see the additional details of the card business on->card details page,
   which includes dinamic map for showing the business location site.
 
 - sign up on the-> sign up navink

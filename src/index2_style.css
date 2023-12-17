@@ -1,9 +1,13 @@
 /* App style */
 
+body {
+  padding-top: 70px; /* Adjust the value based on your navbar height */
+}
+
 .appName,
 .personLink {
   transition: 0.5s, box-shadow 0.3s ease;
- 
+
   &:hover {
     scale: 1.2;
     box-shadow: 0 0 40px rgb(175, 145, 145);
@@ -17,21 +21,20 @@ nav .nav-link {
   }
 }
 
-.linkHover {
-  transition: 0.1s !important;
+.userItem {
   &hover {
-    scale: 1.05 !important;
+    scale: none;
   }
 }
 
 .card {
   transform: scale(1);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
-  transition: box-shadow 0.3s ease, transform 0.3s ease; 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
 
   &:hover {
-    box-shadow: 0 0 20px rgba(0, 0, 0, 1); 
-    transform: scale(1.05); 
+    box-shadow: 0 0 20px rgba(0, 0, 0, 1);
+    transform: scale(1.05);
   }
 }
 
@@ -41,9 +44,9 @@ nav .nav-link {
 
 .someLink {
   color: brown !important;
-  text-decoration: none; 
-  transition: text-decoration 0.3s ease; 
+  text-decoration: none;
+  transition: text-decoration 0.3s ease;
   &:hover {
-    text-decoration: underline; 
+    text-decoration: underline;
   }
 }

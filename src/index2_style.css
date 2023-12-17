@@ -1,0 +1,49 @@
+/* App style */
+
+.appName,
+.personLink {
+  transition: 0.5s, box-shadow 0.3s ease;
+  /* box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); */
+  &:hover {
+    scale: 1.2;
+    box-shadow: 0 0 40px rgb(175, 145, 145);
+  }
+}
+
+nav .nav-link {
+  transition: 0.5s;
+  &:hover {
+    scale: 1.4;
+  }
+}
+
+.linkHover {
+  transition: 0.1s !important;
+  &hover {
+    scale: 1.05 !important;
+  }
+}
+
+.card {
+  transform: scale(1); /* Initial scale */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Initial box shadow */
+  transition: box-shadow 0.3s ease, transform 0.3s ease; /* Transition effect */
+
+  &:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 1); /* Box shadow on hover */
+    transform: scale(1.05); /* Scale on hover */
+  }
+}
+
+.card img {
+  height: 13rem !important;
+}
+
+.someLink {
+  color: brown !important;
+  text-decoration: none; /* Initial text decoration */
+  transition: text-decoration 0.3s ease; /* Transition effect */
+  &:hover {
+    text-decoration: underline; /* Underline on hover */
+  }
+}

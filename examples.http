@@ -1,0 +1,48 @@
+@local=https://monkfish-app-z9uza.ondigitalocean.app/bcard2
+@token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTNhNjA4ZDFjN2NkODBjMWZkMjc1MzIiLCJpc0J1c2luZXNzIjp0cnVlLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE3MDA2NzQ3NDR9.QiUP68HPSTagftwO3JIYFBTrX8DKsKpATGgk-cHf9UQ
+
+### register (signup)
+POST {{local}}/api/users
+Content-Type: application/json
+
+{
+    "name": "Daniel",
+    "email": "di@gmil.com",
+    "password": "Aa123456",
+    "biz": true
+}
+
+### authentication (login)
+POST {{local}}/api/auth
+Content-Type: application/json
+
+{
+    "email": "di@gmil.com",
+    "password": "Aa123456"
+}
+
+### authorization
+GET {{local}}/api/users/me
+x-auth-token: {{token}}
+
+### create card
+POST {{local}}/api/cards
+x-auth-token: {{token}}
+Content-Type: application/json
+
+{
+    "bizName": "lemon",
+    "bizDescription": "lemon lemon",
+    "bizAddress": "lemon .av",
+    "bizPhone": "058845545",
+    "bizImage":"https://media.istockphoto.com/id/1398765336/photo/lemon-on-white-background.jpg?s=2048x2048&w=is&k=20&c=ZeiuuV-FzBS7zecn5Dk9sIHgXYfFLG0d6KBgjoC01rk="
+}
+
+### signin admin
+POST {{local}}/users/login
+Content-Type: application/json
+
+{
+   "email": "admin@gmail.com",
+   "password": "Abc!123Abc"
+}

@@ -1,0 +1,6 @@
+/* responsive */
+@media (max-width: 768px) {
+  .about-description {
+    font-size: 14px;
+  }
+}

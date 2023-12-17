@@ -39,3 +39,7 @@ the crud ections on every card are:
 - more details-> represented by phone icon,
 - delete-> represented by trush icon and appearing on my cards only, for business/admin user
 - edit-> represented by pen icon and appearing on my cards only, for business/admin user
+<<<<<<< HEAD
+=======
+
+>>>>>>> b37971377e50ee08474d5e8aff6352fd169c168b

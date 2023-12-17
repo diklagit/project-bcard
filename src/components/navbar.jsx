@@ -65,7 +65,7 @@ const NavBar = () => {
             >
               <input
                 type='text'
-                placeHolder={'Search...'}
+                placeholder={'Search...'}
                 autoComplete='off'
                 onKeyDown={() => {
                   'TopNavBar.googleSearchAttachKeyPressHandler(event)';

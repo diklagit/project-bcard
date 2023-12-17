@@ -42,7 +42,7 @@ const AllCards = () => {
             to={`/sandbox`}
             className='icon-link icon-link-hover someLink fs-6 fw-bold ms-3'
             style={{
-              'icon-link-transform': 'translate3d(0, -.125rem, 0)',
+              iconLinkTransform: 'translate3d(0, -.125rem, 0)',
             }}
           >
             <i className='bi bi-folder-symlink' aria-hidden='true'></i>
